@@ -141,7 +141,7 @@ static Key keys[] = {
 
 	/* { MODKEY,			XK_a,		spawn,		SHCMD("st -e lmc control") }, */
 	/* { MODKEY|ShiftMask,		XK_a,		spawn,		SHCMD("") }, */
-	/* { MODKEY,			XK_s,		togglesticky,	{0} }, */
+	/* { MODKEY,			XK_s,		spawn,	        SHCMD("simplenote")  }, */
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
@@ -169,7 +169,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & } ; xwallpaper --zoom ~/.config/wall.png") },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("hover left") }, */
-	/* { MODKEY,			XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
+	{ MODKEY,			XK_n,		spawn,	        SHCMD("simplenote")  },
 	/* { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("hover right") }, */
 	/* { MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("lmc toggle") }, */
 	/* { MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") }, */
