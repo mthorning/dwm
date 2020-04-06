@@ -141,7 +141,7 @@ static Key keys[] = {
 
 	/* { MODKEY,			XK_a,		spawn,		SHCMD("st -e lmc control") }, */
 	/* { MODKEY|ShiftMask,		XK_a,		spawn,		SHCMD("") }, */
-	/* { MODKEY,			XK_s,		spawn,	        SHCMD("simplenote")  }, */
+	{ MODKEY,			XK_s,		spawn,	        SHCMD("slack")  },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
