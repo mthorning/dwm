@@ -116,9 +116,9 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_w,		spawn,		SHCMD("brave") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
-	{ MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") },
-	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("tutorialvids") },
-	{ MODKEY,			XK_r,		spawn,		SHCMD("st -e lf") },
+	/* { MODKEY,			XK_e,		spawn,		SHCMD("st -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook") }, */
+	/* { MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("tutorialvids") },*/
+	/* { MODKEY,			XK_r,		spawn,		SHCMD("st -e lf") }, */
 	/* { MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} },
 	/* { MODKEY|ShiftMask,		XK_t,		spawn,		SHCMD("") }, */
@@ -130,29 +130,29 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_i,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
-	{ MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") },
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") },
-	{ MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -120") },
-	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
-	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +120") },
+	/* { MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") }, */
+	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
+	/* { MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") }, */
+	/* { MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -120") }, */
+	/* { MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") }, */
+	/* { MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +120") }, */
 	{ MODKEY,			XK_backslash,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
-	{ MODKEY,			XK_a,		spawn,		SHCMD("st -e lmc control") },
+	/* { MODKEY,			XK_a,		spawn,		SHCMD("st -e lmc control") }, */
 	/* { MODKEY|ShiftMask,		XK_a,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_s,		togglesticky,	{0} },
+	/* { MODKEY,			XK_s,		togglesticky,	{0} }, */
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	/* { MODKEY|ShiftMask,		XK_f,		togglefullscr,	{0} }, */
-	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
+	/* { MODKEY,			XK_g,		shiftview,	{ .i = -1 } }, */
 	/* { MODKEY|ShiftMask,		XK_g,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
-	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
+	/* { MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } }, */
 	/* { MODKEY|ShiftMask,		XK_semicolon,	shiftview,	SHCMD("") }, */
 	/* { MODKEY,			XK_apostrophe,	spawn,		SHCMD("") }, */
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
@@ -161,48 +161,47 @@ static Key keys[] = {
 
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -1 } },
-	{ MODKEY,			XK_x,		spawn,		SHCMD("slock & xset dpms force off; mpc pause ; pauseallmpv") },
+	/* { MODKEY,			XK_x,		spawn,		SHCMD("slock & xset dpms force off; mpc pause ; pauseallmpv") }, */
 	{ MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Shutdown computer?\")\" = Yes ] && sudo -A shutdown -h now") },
 	/* { MODKEY,			XK_c,		spawn,		SHCMD("") }, */
-	{ MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=mpvfloat $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
-	{ MODKEY,			XK_v,		spawn,		SHCMD("st -e $EDITOR -c \"VimwikiIndex\"") },
+	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=mpvfloat $(ls /dev/video[0,2,4,6,8] | tail -n 1)") }, */
+	/* { MODKEY,			XK_v,		spawn,		SHCMD("st -e $EDITOR -c \"VimwikiIndex\"") }, */
 	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & } ; xwallpaper --zoom ~/.config/wall.png") },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
-	{ MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("hover left") },
-	{ MODKEY,			XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") },
-	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("hover right") },
-	{ MODKEY,			XK_m,		spawn,		SHCMD("st -e ncmpcpp") },
-	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("lmc toggle") },
-	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
-	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") },
-	{ MODKEY,			XK_period,	spawn,		SHCMD("mpc next") },
-	{ MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") },
+	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("hover left") }, */
+	/* { MODKEY,			XK_n,		spawn,		SHCMD("st -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
+	/* { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("hover right") }, */
+	/* { MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("lmc toggle") }, */
+	/* { MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") }, */
+	/* { MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") }, */
+	/* { MODKEY,			XK_period,	spawn,		SHCMD("mpc next") }, */
+	/* { MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") }, */
 
-	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
-	{ MODKEY,			XK_Page_Down,	shiftview,	{ .i = 1 } },
-	{ MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") },
+	/* { MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } }, */
+	/* { MODKEY,			XK_Page_Down,	shiftview,	{ .i = 1 } }, */
+	/* { MODKEY,			XK_Insert,	spawn,		SHCMD("notify-send \"📋 Clipboard contents:\" \"$(xclip -o -selection clipboard)\"") }, */
 
-	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /home/mthorning/dwm/larbs.mom -Tpdf | zathura -") },
-	{ MODKEY,			XK_F2,		quit,		{0} },
-	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
-	{ MODKEY,			XK_F4,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Hibernate computer?\")\" = Yes ] && sudo -A zzz") },
-	{ MODKEY,			XK_F5,		xrdb,		{.v = NULL } },
-	{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
-	{ MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") },
-	{ MODKEY,			XK_F8,		spawn,		SHCMD("mailsync") },
-	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
-	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
+	/* { MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /home/mthorning/dwm/larbs.mom -Tpdf | zathura -") }, */
+	/* { MODKEY,			XK_F2,		quit,		{0} }, */
+	/* { MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") }, */
+	/* { MODKEY,			XK_F4,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Hibernate computer?\")\" = Yes ] && sudo -A zzz") }, */
+	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
+	/* { MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") }, */
+	/* { MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") }, */
+	/* { MODKEY,			XK_F8,		spawn,		SHCMD("mailsync") }, */
+	/* { MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") }, */
+	/* { MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") }, */
 	/* { MODKEY,			XK_F11,		spawn,		SHCMD("") }, */
 	/* { MODKEY,			XK_F12,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_space,	zoom,		{0} },
 	{ MODKEY|ShiftMask,		XK_space,	togglefloating,	{0} },
 
-	{ 0,				XK_Print,	spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
-	{ ShiftMask,			XK_Print,	spawn,		SHCMD("maimpick") },
-	{ MODKEY,			XK_Print,	spawn,		SHCMD("dmenurecord") },
-	{ MODKEY|ShiftMask,		XK_Print,	spawn,		SHCMD("dmenurecord kill") },
-	{ MODKEY,			XK_Delete,	spawn,		SHCMD("dmenurecord kill") },
-	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
+	/* { 0,				XK_Print,	spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") }, */
+	/* { ShiftMask,			XK_Print,	spawn,		SHCMD("maimpick") }, */
+	/* { MODKEY,			XK_Print,	spawn,		SHCMD("dmenurecord") }, */
+	/* { MODKEY|ShiftMask,		XK_Print,	spawn,		SHCMD("dmenurecord kill") }, */
+	/* { MODKEY,			XK_Delete,	spawn,		SHCMD("dmenurecord kill") }, */
+	/* { MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") }, */
 
 	/* { 0, XF86XK_AudioMute,		spawn,		SHCMD("lmc toggle") }, */
 	/* { 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("lmc up") }, */
