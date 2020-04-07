@@ -171,6 +171,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("hover left") }, */
 	{ MODKEY,			XK_n,		spawn,	        SHCMD("simplenote")  },
 	/* { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD("hover right") }, */
+	{ MODKEY,			XK_m,		spawn,	        SHCMD("ytmdesktop")  },
 	/* { MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("lmc toggle") }, */
 	/* { MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") }, */
 	/* { MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") }, */
