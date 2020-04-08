@@ -128,10 +128,10 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_u,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_i,		setlayout,	{.v = &layouts[3]} },
 	/* { MODKEY|ShiftMask,		XK_i,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
-	/* { MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") }, */
-	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
+	{ MODKEY,			XK_o,		spawn,          SHCMD("Onivim2-x86_64.AppImage")},
+	/* { MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } }, */
+	{ MODKEY,			XK_p,		incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_p,		incnmaster,     {.i = -1 } },
 	/* { MODKEY,			XK_bracketleft,		spawn,		SHCMD("mpc seek -10") }, */
 	/* { MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -120") }, */
 	/* { MODKEY,			XK_bracketright,	spawn,		SHCMD("mpc seek +10") }, */
@@ -162,7 +162,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -1 } },
 	/* { MODKEY,			XK_x,		spawn,		SHCMD("slock & xset dpms force off; mpc pause ; pauseallmpv") }, */
-	{ MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Shutdown computer?\")\" = Yes ] && sudo -A shutdown -h now") },
+	{ MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Shutdown computer?\")\" = Yes ] && sudo -A shutdown now") },
 	/* { MODKEY,			XK_c,		spawn,		SHCMD("") }, */
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --input-conf=/dev/null --title=mpvfloat $(ls /dev/video[0,2,4,6,8] | tail -n 1)") }, */
 	/* { MODKEY,			XK_v,		spawn,		SHCMD("st -e $EDITOR -c \"VimwikiIndex\"") }, */
@@ -185,7 +185,7 @@ static Key keys[] = {
 	/* { MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /home/mthorning/dwm/larbs.mom -Tpdf | zathura -") }, */
 	/* { MODKEY,			XK_F2,		quit,		{0} }, */
 	/* { MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") }, */
-	/* { MODKEY,			XK_F4,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Hibernate computer?\")\" = Yes ] && sudo -A zzz") }, */
+	 { MODKEY,			XK_F4,		spawn,		SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Hibernate computer?\")\" = Yes ] && sudo -A zzz") },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	/* { MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") }, */
 	/* { MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") }, */
