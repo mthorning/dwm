@@ -103,7 +103,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_w,		spawn,		SHCMD("brave") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD("st -e sudo nmtui") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} },
-	{ MODKEY,			XK_y,		setlayout,	{.v = &layouts[1]} },
+	{ MODKEY,			XK_g,		setlayout,	{.v = &layouts[1]} },
 	{ MODKEY,			XK_o,		spawn,          SHCMD("Onivim2-x86_64.AppImage")},
 	{ MODKEY,			XK_p,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_p,		incnmaster,     {.i = -1 } },
