@@ -114,9 +114,11 @@ static Key keys[] = {
 	{ MODKEY,			XK_f,		setlayout,	{.v = &layouts[2]} },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
+
         { MODKEY,                       XK_Return,      spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.v = scratchpadcmd } },
-
+	{ MODKEY|ShiftMask,             XK_j,           rotatestack,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & } ; xwallpaper --zoom ~/.config/wall.png") },
