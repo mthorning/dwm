@@ -112,8 +112,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
 	{ MODKEY,			XK_f,		setlayout,	{.v = &layouts[2]} },
-	{ MODKEY,                       XK_Left,        viewtoleft,     {0} },
-	{ MODKEY|ShiftMask,             XK_Left,        tagtoleft,      {0} },
+	{ MODKEY,                       XK_h,           viewtoleft,     {0} },
+	{ MODKEY|ShiftMask,             XK_h,           tagtoleft,      {0} },
 	{ MODKEY,                       XK_l,           viewtoright,    {0} },
 	{ MODKEY|ShiftMask,             XK_l,           tagtoright,     {0} },
 
