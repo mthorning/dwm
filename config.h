@@ -94,8 +94,6 @@ static Key keys[] = {
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
-	{ MODKEY|ShiftMask,	        XK_9,		setmfact,	{.f = -0.05} }, 
-	{ MODKEY|ShiftMask,		XK_0,		setmfact,      	{.f = +0.05} },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	        SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Close Xorg?\")\" = Yes ] && killall Xorg") },
 
 	{ MODKEY,			XK_Tab,		view,		{0} },
@@ -107,7 +105,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_o,		spawn,          SHCMD("Onivim2-x86_64.AppImage")},
 	{ MODKEY,			XK_p,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_p,		incnmaster,     {.i = -1 } },
-	{ MODKEY,			XK_backslash,		view,		{0} },
+	{ MODKEY,         	        XK_bracketleft, setmfact,	{.f = -0.05} }, 
+	{ MODKEY,	        	XK_bracketright,setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_s,		spawn,	        SHCMD("slack")  },
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
@@ -122,6 +121,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_j,           rotatestack,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +1 } },
+	{ MODKEY,			XK_backslash,		view,		{0} },
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -1 } },
 	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & }") },
 	{ MODKEY,			XK_c,		spawn,	        SHCMD("code")  },
