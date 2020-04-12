@@ -124,7 +124,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_k,           rotatestack,    {.i = -1 } },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -1 } },
-	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & } ; xwallpaper --zoom ~/.config/wall.png") },
+	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD("{ killall xcompmgr || setsid xcompmgr & }") },
 	{ MODKEY,			XK_c,		spawn,	        SHCMD("code")  },
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	{ MODKEY,			XK_n,		spawn,	        SHCMD("simplenote")  },
