@@ -93,12 +93,9 @@ static Key keys[] = {
 	TAGKEYS(			XK_7,		6)
 	TAGKEYS(			XK_8,		7)
 	TAGKEYS(			XK_9,		8)
-	{ MODKEY,                       XK_Left,   viewtoleft,     {0} },
-	{ MODKEY,                       XK_Right,  viewtoright,    {0} },
-	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
-	{ MODKEY|ShiftMask,             XK_Right,  tagtoright,     {0} },
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
-	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
+	{ MODKEY|ShiftMask,	        XK_9,		setmfact,	{.f = -0.05} }, 
+	{ MODKEY|ShiftMask,		XK_0,		setmfact,      	{.f = +0.05} },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,	        SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Close Xorg?\")\" = Yes ] && killall Xorg") },
 
 	{ MODKEY,			XK_Tab,		view,		{0} },
@@ -115,8 +112,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_d,		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,		XK_d,		togglegaps,	{0} },
 	{ MODKEY,			XK_f,		setlayout,	{.v = &layouts[2]} },
-	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
-	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
+	{ MODKEY,                       XK_Left,        viewtoleft,     {0} },
+	{ MODKEY|ShiftMask,             XK_Left,        tagtoleft,      {0} },
+	{ MODKEY,                       XK_l,           viewtoright,    {0} },
+	{ MODKEY|ShiftMask,             XK_l,           tagtoright,     {0} },
 
         { MODKEY,                       XK_Return,      spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.v = scratchpadcmd } },
